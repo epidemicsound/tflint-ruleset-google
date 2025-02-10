@@ -23,11 +23,11 @@ resource "google_sql_database_instance" "instance" {
 			Expected: helper.Issues{
 				{
 					Rule:    NewGoogleSQLDatabaseInstanceNameRule(),
-					Message: `"name" ("instance") doesn't match regexp "^[a-z0-9-]+$"`,
+					Message: `"name" ("my_instance") doesn't match regexp "^[a-z0-9-]+$"`,
 					Range: hcl.Range{
 						Filename: "resource.tf",
-						Start:    hcl.Pos{Line: 0, Column: 0},
-						End:      hcl.Pos{Line: 0, Column: 0},
+						Start:    hcl.Pos{Line: 3, Column: 10},
+						End:      hcl.Pos{Line: 3, Column: 23},
 					},
 				},
 			},
