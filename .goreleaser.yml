@@ -42,7 +42,7 @@ signs:
       - --yes
 release:
   github:
-    owner: terraform-linters
+    owner: epidemicsound
     name: tflint-ruleset-google
   draft: true
 snapshot:
