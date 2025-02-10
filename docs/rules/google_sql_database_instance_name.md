@@ -1,12 +1,12 @@
 # google_sql_database_instance_name
 
-// TODO: Write the rule's description here
+Validate if `name` of `google_sql_database_instance` contains only lowercase letters, numbers and hyphens.
 
-## Example
+## Example of invalid resource
 
 ```hcl
-resource "null_resource" "foo" {
-  // TODO: Write the example Terraform code which violates the rule
+resource "google_sql_database_instance" "instance" {
+  name = "my_instance"
 }
 ```
 
