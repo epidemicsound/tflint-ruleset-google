@@ -27,14 +27,6 @@ jobs:
     - name: Install Cosign
       uses: sigstore/cosign-installer@v3
 
-    - name: "Get short-lived token to access golang repos"
-      uses: epidemicsound/github-workflows/.github/actions/github-app-token@main
-      id: get_golang_repo_token
-      with:
-        service-account: "dashboards-go-gha@es-shared-mgmt-02dd.iam.gserviceaccount.com"
-        github-app: "golang-r"
-        workload-identity-provider: "projects/747834912006/locations/global/workloadIdentityPools/epidemicsound/providers/github"
-
     - name: Run GoReleaser
       uses: goreleaser/goreleaser-action@v6
       with:
