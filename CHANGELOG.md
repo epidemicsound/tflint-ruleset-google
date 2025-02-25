@@ -1,3 +1,9 @@
+## 0.31.0
+
+### Enhancements
+
+- Add rule `google_sql_database_instance_name`
+
 ## 0.30.0 (2024-07-23)
 
 ### Enhancements
