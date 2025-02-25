@@ -13,14 +13,19 @@ resource "google_sql_database_instance" "instance" {
 ```
 $ tflint
 
-// TODO: Write the output when inspects the above code
+Error: "name" ("postgres_eu_we1-journey-4") doesn't match regexp "^[a-z0-9-]+$" (google_sql_database_instance_name)
+
+  on journey_4.tf line 8:
+   8:   name                = "postgres_eu_we1-journey-4"
+
+Reference: https://github.com/terraform-linters/tflint-ruleset-google/blob/v0.31.0/docs/rules/google_sql_database_instance_name.md
 
 ```
 
 ## Why
 
-// TODO: Write why you should follow the rule. This section is also a place to explain the value of the rule
+That's the limitation from GCP API.
 
 ## How To Fix
 
-// TODO: Write how to fix it to avoid the problem
+Use the name that contains only lowercase letters, numbers and hyphens.
