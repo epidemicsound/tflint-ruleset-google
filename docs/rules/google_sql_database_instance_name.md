@@ -18,7 +18,7 @@ Error: "name" ("postgres_eu_we1-journey-4") doesn't match regexp "^[a-z0-9-]+$" 
   on journey_4.tf line 8:
    8:   name                = "postgres_eu_we1-journey-4"
 
-Reference: https://github.com/terraform-linters/tflint-ruleset-google/blob/v0.31.0/docs/rules/google_sql_database_instance_name.md
+Reference: https://github.com/terraform-linters/tflint-ruleset-google/blob/v0.31.1/docs/rules/google_sql_database_instance_name.md
 
 ```
 

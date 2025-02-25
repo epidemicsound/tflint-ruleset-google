@@ -17,7 +17,7 @@ You can install the plugin by adding a config to `.tflint.hcl` and running `tfli
 ```hcl
 plugin "google" {
     enabled = true
-    version = "0.31.0"
+    version = "0.31.1"
     source  = "github.com/terraform-linters/tflint-ruleset-google"
 }
 ```
@@ -59,3 +59,7 @@ $ go run ./rules/generator
 ```
 
 Follow the instructions to edit the generated files and open a new pull request.
+
+## Create a new release
+
+TBD
