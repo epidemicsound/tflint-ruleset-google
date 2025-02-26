@@ -62,4 +62,10 @@ Follow the instructions to edit the generated files and open a new pull request.
 
 ## Create a new release
 
-TBD
+1. Add your changes to a PR (include a commit with the version bump into the PR), get review, merge to main.
+2. Wait for a successful completion of the build on main.
+3. Fetch the latest state of main to your local machine, create a tag and push it to remote
+   (i.e. `git checkout main && git pull && git tag v0.31.2 && git push origin v0.31.2`).
+4. Wait for the [release](https://github.com/epidemicsound/tflint-ruleset-google/actions/workflows/release.yml) workflow to finish.
+5. Go to [releases](https://github.com/epidemicsound/tflint-ruleset-google/releases), your new release will be in the `draft` state.
+6. Click edit -> add the release notes (or auto-generate them) -> Publish release.
