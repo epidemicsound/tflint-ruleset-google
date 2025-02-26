@@ -18,7 +18,7 @@ You can install the plugin by adding a config to `.tflint.hcl` and running `tfli
 plugin "google" {
     enabled = true
     version = "0.31.1"
-    source  = "github.com/terraform-linters/tflint-ruleset-google"
+    source  = "github.com/epidemicsound/tflint-ruleset-google"
 }
 ```
 
