@@ -3,7 +3,7 @@
 [![GitHub release](https://img.shields.io/github/release/epidemicsound/tflint-ruleset-google.svg)](https://github.com/epidemicsound/tflint-ruleset-google/releases/latest)
 [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-blue.svg)](LICENSE)
 
-TFLint ruleset plugin for Terraform Google Cloud Platform provider
+TFLint ruleset plugin for Terraform Google Cloud Platform provider (fork of https://github.com/terraform-linters/setup-tflint)
 
 ## Requirements
 
