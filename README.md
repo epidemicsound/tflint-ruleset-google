@@ -69,3 +69,35 @@ Follow the instructions to edit the generated files and open a new pull request.
 4. Wait for the [release](https://github.com/epidemicsound/tflint-ruleset-google/actions/workflows/release.yml) workflow to finish.
 5. Go to [releases](https://github.com/epidemicsound/tflint-ruleset-google/releases), your new release will be in the `draft` state.
 6. Click edit -> add the release notes (or auto-generate them) -> Publish release.
+
+## Test TFLint plugin locally
+
+1. Build the binary
+
+```
+go build
+```
+
+2. Move the binary to TFLint plugin folder
+
+```
+mkdir -p ~/.tflint.d/plugins/github.com/epidemicsound/tflint-ruleset-google/local_test/
+mv tflint-ruleset-google ~/.tflint.d/plugins/github.com/epidemicsound/tflint-ruleset-google/local_test/
+```
+
+3. Update `.tflint` config:
+
+```
+plugin "google" {
+  enabled    = true
+  deep_check = true
+  version    = "local_test"
+  source     = "github.com/epidemicsound/tflint-ruleset-google"
+}
+```
+
+4. Run tflint:
+
+```
+tflint --config /git/infra/.tflint.hcl --call-module-type=all
+```

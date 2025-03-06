@@ -376,3 +376,15 @@ func isValidIAMMemberFormat(s string) bool {
 		strings.HasPrefix(s, "principalSet://") ||
 		strings.HasPrefix(s, "principal://")
 }
+
+func validateLength(min, max int) schema.SchemaValidateFunc {
+	return func(v interface{}, k string) (ws []string, errors []error) {
+		value := v.(string)
+		if len(value) < min || len(value) > max {
+			errors = append(errors, fmt.Errorf(
+				"%q (%q) must be %d-%d characters", k, value, min, max))
+		}
+
+		return
+	}
+}
