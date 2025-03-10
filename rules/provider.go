@@ -21,6 +21,7 @@ var manualRules = []tflint.Rule{
 	NewGoogleProjectIamPolicyInvalidMemberRule(),
 	NewGoogleSQLDatabaseInstanceNameRule(),
 	NewGoogleServiceAccountInvalidIDRule(),
+	NewGooglePubsubSubscriptionExpirationPolicyRule(),
 }
 
 // Rules is a list of all rules
